@@ -8,4 +8,14 @@ public class LevelButton : MonoBehaviour
 
     public LevelData GetLevelData() => data;
 
+    public void Activate(bool activate)
+    {
+        //TODO: implement button when activated and inactivated
+    }
+
+    public void OnClick()
+    {
+        SceneLoader.Instance.LoadLevelScene(data);
+    }
+
 }

@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class LevelListManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<LevelButton> levelButtons;
+
+    private void Awake()
     {
-        
+        SetupLevelButtons();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SetupLevelButtons()
     {
-        
+        int levelProgress = GameManager.Instance.playerLevelProgress;
+        levelButtons.ForEach(levelButton =>
+        {
+            var levelIndex = levelButton.GetLevelData().GetLevelIndex();
+            if (levelIndex <= levelProgress)
+            {
+                levelButton.Activate(true);
+            }
+            else
+            {
+                levelButton.Activate(false);
+            }
+        });
     }
+
 }
