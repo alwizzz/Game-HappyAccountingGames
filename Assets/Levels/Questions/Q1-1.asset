@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Q1-1
   m_EditorClassIdentifier: 
   question: Pertanyaan 1
-  booleanAnswer: 1
-  shuffle: 0
-  correctAnswer: 
-  wrongAnswer: 
+  correctOption: 1

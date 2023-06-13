@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class LevelListManager : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class LevelListManager : MonoBehaviour
         int levelProgress = GameManager.Instance.playerLevelProgress;
         levelButtons.ForEach(levelButton =>
         {
-            var levelIndex = levelButton.GetLevelData().GetLevelIndex();
+            var levelIndex = levelButton.GetLevelIndex();
             if (levelIndex <= levelProgress)
             {
                 levelButton.Activate(true);

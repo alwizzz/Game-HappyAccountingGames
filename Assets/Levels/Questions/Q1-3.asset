@@ -12,9 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31f58b684d81784b88623cb4e806bdf, type: 3}
   m_Name: Q1-3
   m_EditorClassIdentifier: 
-  question: 
-  booleanAnswer: 1
-  shuffle: 0
-  option1Caption: True
-  option2Caption: False
+  question: Pertanyaan 3
   correctOption: 0

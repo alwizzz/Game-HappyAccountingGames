@@ -11,9 +11,9 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
         Application.Quit();
     }
 
-    public void LoadLevelScene(LevelData data)
+    public void LoadLevelScene(int levelIndex)
     {
-        GameManager.Instance.currentLevelData = data;
+        GameManager.Instance.currentLevel = levelIndex;
         SceneManager.LoadScene("Level");
     }
 

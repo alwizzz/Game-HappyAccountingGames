@@ -10,4 +10,5 @@ public class LevelData : ScriptableObject
     [SerializeField] private List<QuestionData> questionList;
 
     public int GetLevelIndex() => levelIndex;
+    public List<QuestionData> GetQuestionList() => questionList;
 }
