@@ -62,4 +62,14 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
+    public void StartGame()
+    {
+        SceneLoader.Instance.LoadLevelListScene();
+    }
+
+    public void ContinueGame()
+    {
+        SceneLoader.Instance.LoadLevelListScene();
+    }
+
 }

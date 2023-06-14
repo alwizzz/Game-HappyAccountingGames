@@ -26,4 +26,17 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     {
         SceneManager.LoadScene("MainMenu");
     }
+
+    public void LoadTitleScreenScene()
+    {
+        SceneManager.LoadScene("TitleScreen");
+    }
+    public void LoadSummaryListScene()
+    {
+        SceneManager.LoadScene("SummaryList");
+    }
+    public void LoadSummaryScene()
+    {
+        SceneManager.LoadScene("Summary");
+    }
 }
