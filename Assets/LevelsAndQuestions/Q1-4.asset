@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e31f58b684d81784b88623cb4e806bdf, type: 3}
-  m_Name: Q2-1
+  m_Name: Q1-4
   m_EditorClassIdentifier: 
-  question: Pertanyaan 1
-  booleanAnswer: 1
-  shuffle: 0
-  correctAnswer: 
-  wrongAnswer: 
+  question: Kewajiban dicatat di debit
+  correctOption: 1

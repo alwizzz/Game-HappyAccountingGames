@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e31f58b684d81784b88623cb4e806bdf, type: 3}
   m_Name: Q1-1
   m_EditorClassIdentifier: 
-  question: Pertanyaan 1
+  question: Pada mulanya, akuntansi berasal dari Indonesia
   correctOption: 1
