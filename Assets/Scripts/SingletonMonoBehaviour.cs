@@ -3,22 +3,35 @@ using UnityEngine;
 public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 {
     public static T Instance = null;
-    public bool dontDestroyOnLoad = true;
+    //public bool dontDestroyOnLoad = true;
 
     protected virtual void Awake()
     {
+        //print(FindObjectsOfType<T>().Length);
+        //if (Instance != null)
+        //{
+        //    Destroy(Instance.gameObject);
+        //}
+        //else
+        //{
+        //    Instance = this as T;
+        //    DontDestroyOnLoad(Instance);
 
-        if (Instance != null)
+        //    //if (dontDestroyOnLoad)
+        //    //{
+        //    //    DontDestroyOnLoad(Instance);
+        //    //}
+        //}
+
+        int thisScriptCount = FindObjectsOfType<T>().Length;
+        if(thisScriptCount > 1)
         {
-            Destroy(Instance.gameObject);
-        }
-        else
+            gameObject.SetActive(false);
+            Destroy(gameObject);
+        } else
         {
             Instance = this as T;
-            if (dontDestroyOnLoad)
-            {
-                DontDestroyOnLoad(Instance);
-            }
+            DontDestroyOnLoad(Instance);
         }
     }
 
@@ -34,11 +47,11 @@ public class SingletonMonoBehaviour<T> : MonoBehaviour where T : MonoBehaviour
 
     }
 
-    protected virtual void OnDestroy()
-    {
-        if (Instance != null)
-        {
-            Instance = null;
-        }
-    }
+    //protected virtual void OnDestroy()
+    //{
+    //    if (Instance != null)
+    //    {
+    //        Instance = null;
+    //    }
+    //}
 }

@@ -14,6 +14,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
 
     public List<LevelProgress> levelProgresses;
+    public List<SummaryData> summaryDataList;
 
     [Header("Inter-scene Cache")]
     public int currentLevel;
@@ -47,6 +48,27 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         return levelData;
     }
 
+    public SummaryData GetCurrentSummary()
+    {
+        SummaryData summaryData = null;
+        foreach(SummaryData dt in summaryDataList)
+        {
+            if(dt.index == currentSummary)
+            {
+                summaryData = dt;
+                break;
+            }
+        }
+
+        if(summaryData == null)
+        {
+            print("Summary not found!, returning level on the first index instead");
+            summaryData = summaryDataList[0];
+        }
+
+        return summaryData;
+    }
+
     public void UpdateScore(int levelIndex, int scorePoint)
     {
         foreach(LevelProgress lp in levelProgresses)
@@ -66,12 +88,12 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public void StartGame()
     {
-        SceneLoader.Instance.LoadLevelListScene();
+        FindObjectOfType<SceneLoader>().LoadLevelListScene();
     }
 
     public void ContinueGame()
     {
-        SceneLoader.Instance.LoadLevelListScene();
+        FindObjectOfType<SceneLoader>().LoadLevelListScene();
     }
 
 }

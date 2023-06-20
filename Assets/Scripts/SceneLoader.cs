@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
+public class SceneLoader : MonoBehaviour
 {
     public void QuitGame()
     {

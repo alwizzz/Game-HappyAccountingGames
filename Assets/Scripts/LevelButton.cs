@@ -17,7 +17,7 @@ public class LevelButton : MonoBehaviour
 
     public void OnClick()
     {
-        SceneLoader.Instance.LoadLevelScene(levelIndex);
+        FindObjectOfType<SceneLoader>().LoadLevelScene(levelIndex);
     }
 
 }
