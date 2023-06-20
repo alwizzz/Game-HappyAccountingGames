@@ -35,8 +35,10 @@ public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     {
         SceneManager.LoadScene("SummaryList");
     }
-    public void LoadSummaryScene()
+
+    public void LoadSummaryScene(int summaryIndex)
     {
+        GameManager.Instance.currentSummary = summaryIndex;
         SceneManager.LoadScene("Summary");
     }
 }

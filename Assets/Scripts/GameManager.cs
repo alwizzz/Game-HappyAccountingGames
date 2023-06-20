@@ -17,6 +17,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     [Header("Inter-scene Cache")]
     public int currentLevel;
+    public int currentSummary;
+
 
     protected override void Awake()
     {
