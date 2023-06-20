@@ -54,7 +54,7 @@ public class LevelMaster : MonoBehaviour
     private void UpdateQuestionText()
     {
         questionText.text = currentQuestion.GetQuestion();
-        questionNumberText.text = "Question No. " + (questionIndex + 1).ToString();
+        questionNumberText.text = "Question No." + (questionIndex + 1).ToString();
     }
 
     #endregion
