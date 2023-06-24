@@ -120,7 +120,7 @@ public class LevelMaster : MonoBehaviour
 
         isWaitingForAnswer = false;
 
-        print("Answer is " + (isCorrect ? "correct!" : "wrong!"));
+        print("==============Answer is " + (isCorrect ? "correct!" : "wrong!"));
         yield return new WaitForSeconds(3f);
 
         NextQuestion();        

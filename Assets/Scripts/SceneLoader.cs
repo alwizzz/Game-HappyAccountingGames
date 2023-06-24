@@ -41,4 +41,16 @@ public class SceneLoader : MonoBehaviour
         GameManager.Instance.currentSummary = summaryIndex;
         SceneManager.LoadScene("Summary");
     }
+
+    public void StartGame()
+    {
+        //TODO: GameManager stuff
+        LoadLevelListScene();
+    }
+
+    public void ContinueGame()
+    {
+        //TODO: GameManager stuff
+        LoadLevelListScene();
+    }
 }

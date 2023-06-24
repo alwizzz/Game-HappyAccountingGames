@@ -86,14 +86,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         }
     }
 
-    public void StartGame()
-    {
-        FindObjectOfType<SceneLoader>().LoadLevelListScene();
-    }
 
-    public void ContinueGame()
-    {
-        FindObjectOfType<SceneLoader>().LoadLevelListScene();
-    }
 
 }

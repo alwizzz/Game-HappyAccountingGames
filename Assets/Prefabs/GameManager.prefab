@@ -44,11 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c778e68f7cc0aa428d3f321222198fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestroyOnLoad: 1
   playerLevelProgress: 1
   levelProgresses:
   - level: {fileID: 11400000, guid: beff1f3c2a3912c4d8752825a6751a2e, type: 2}
     highestScore: 0
   - level: {fileID: 11400000, guid: 9a9ebb9240195dc45a4299f70ef2abe9, type: 2}
     highestScore: 0
+  summaryDataList:
+  - {fileID: 11400000, guid: 285a911a062f4d74786a19461667e02c, type: 2}
   currentLevel: 0
+  currentSummary: 0
